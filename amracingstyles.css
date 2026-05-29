@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* VARIABLES */
+:root {
+    --primary: #002868;
+    --secondary: #FFFFFF;
+    --accent: #BF0A30;
+    --accent-dark: #2d3274;
+    --bg: #f1f2fa;
+    --text: #001524;
+    --white: #efefef;
+}
+
+/* GLOBAL */
+body {
+    font-family: "Playpen Sans", sans-serif;
+    color: var(--primary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HERO BANNER */
+#main-header {
+    position: relative;
+    min-height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+/* MOVING CHECKERED FLAG OVERLAY */
+#main-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("images/checkered-pattern.png");
+    background-size: 300px 300px;
+    opacity: 0.18;
+    animation: flagWave 12s linear infinite;
+    mix-blend-mode: overlay;
+}
+
+@keyframes flagWave {
+    0% { background-position: 0 0; }
+    100% { background-position: 600px 600px; }
+}
+
+/* HERO CONTENT */
+.home-header {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    color: var(--secondary);
+    padding: 40px 20px;
+}
+
+.home-header .intro-heading {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.home-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    padding: 16px;
+    margin: auto;
+}
+
+/* DRIVER SPOTLIGHT */
+#driver-spotlight {
+    padding: 60px 0;
+    background: var(--bg);
+    text-align: center;
+}
+
+.driver-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.driver-card {
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.driver-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.driver-card h3 {
+    margin-top: 15px;
+    color: var(--primary);
+}
+
+.driver-card p {
+    margin: 10px 0;
+    color: var(--text);
+}
+
+/* QUESTIONS */
+#questions {
+    background-color: var(--primary);
+    padding: 60px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.signup {
+    background: var(--bg);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--secondary);
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+.footer-list a {
+    color: var(--primary);
+}

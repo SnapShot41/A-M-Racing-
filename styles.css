@@ -1,0 +1,400 @@
+@charset "UTF-8";
+
+/* --------------------------------------------------
+   GOOGLE FONT
+-------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+/* --------------------------------------------------
+   GLOBAL RESET
+-------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* --------------------------------------------------
+   VARIABLES
+-------------------------------------------------- */
+:root {
+    --primary: #002868;
+    --secondary: #FFFFFF;
+    --accent: #BF0A30;
+    --accent-dark: #2d3274;
+    --bg: #f1f2fa;
+    --text: #001524;
+    --white: #efefef;
+}
+
+/* --------------------------------------------------
+   GLOBAL STYLES
+-------------------------------------------------- */
+body {
+    font-family: "Playpen Sans", sans-serif;
+    color: var(--primary);
+    background: var(--bg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 500px; /* adjust if needed*/
+    width: 90%;
+}
+
+.team-name {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* --------------------------------------------------
+   HERO BANNER
+-------------------------------------------------- */
+
+@keyframes flagWave {
+    0% { background-position: 0 0; }
+    100% { background-position: 600px 600px; }
+}
+
+/* Hero content */
+.home-header {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    color: var(--secondary);
+    padding: 40px 20px;
+}
+
+.home-header .intro-heading {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.home-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* --------------------------------------------------
+   BUTTONS
+-------------------------------------------------- */
+.btn {
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+/* --------------------------------------------------
+   NAVIGATION
+-------------------------------------------------- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+/* --------------------------------------------------
+   CONTAINER
+-------------------------------------------------- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    padding: 16px;
+    margin: auto;
+}
+
+/* --------------------------------------------------
+   DRIVER SPOTLIGHT
+-------------------------------------------------- */
+#driver-spotlight {
+    padding: 60px 0;
+    background: var(--bg);
+    text-align: center;
+}
+
+.driver-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.driver-card {
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.driver-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.driver-card h3 {
+    margin-top: 15px;
+    color: var(--primary);
+}
+
+.driver-card p {
+    margin: 10px 0;
+    color: var(--text);
+}
+
+/* --------------------------------------------------
+   QUESTIONS SECTION
+-------------------------------------------------- */
+#questions {
+    background-color: var(--primary);
+    padding: 60px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.signup {
+    background: var(--bg);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+footer {
+    background: var(--secondary);
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+}
+
+.footer-list a {
+    color: var(--primary);
+}
+.hero-logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 90%;
+}
+
+#follow-team {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.follow-box {
+    background: var(--secondary);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.follow-box label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.follow-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.follow-box button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#main-header {
+    width: 100%;
+    height: 300px; /* adjust height to what looks good */
+    background-image: url("images/amracing-header.png");
+    background-size: contain; /* makes the whole logo visible */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--bg); /* fallback color */
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;          /* was 30px — this is MUCH tighter */
+    padding: 8px 0;     /* slightly reduced */
+}
+
+.footer-nav img {
+    width: 20px;        /* slightly larger for tap targets */
+    height: 20px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.4));
+    transition: transform 0.2s ease;
+}
+
+footer {
+    padding: 12px 0;    /* reduced overall padding */
+    text-align: center;
+}
+
+.footer-nav a {
+    display: flex;
+    flex-direction: column;   /* stacks image above text */
+    align-items: center;      /* centers both horizontally */
+    justify-content: center;  /* keeps them vertically aligned */
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.footer-nav img {
+    display: block;
+    margin: 0 auto;
+}
+
+.footer-nav {
+    text-align: center;
+}
+
+.driver-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: var(--text);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.driver-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.driver-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.driver-card h3 {
+    margin-top: 15px;
+    color: var(--primary);
+}
+
+.next-race-panel h3 {
+    background: #111;
+    border: 2px solid #7a1fa2;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    max-width: 350px;
+    box-shadow: 0 0 15px rgba(122, 31, 162, 0.6);
+}
+
+/* -----------------------------------------
+   SIMPLE CENTERED COUNTDOWN
+----------------------------------------- */
+.simple-countdown {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+}
+
+#simple-timer {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 12px #000;
+}
+
+.simple-countdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+#simple-timer {
+    color: #ff0000 !important;
+    text-shadow: 0 0 12px rgba(255, 0, 0, 0.7);
+    font-weight: 900;
+}
+
+
+
+
+
+
+

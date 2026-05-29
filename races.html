@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standings & Race Schedule – A & M Racing Team</title>
+    <link rel="stylesheet" href="amracingstyles.css">
+</head>
+
+<body>
+
+<header id="main-header" class="driver-hero" style="background-image: url('images/trackstandingspage.png');">
+    <div class="container">
+        <div class="home-header">
+            <h1 class="intro-heading">Standings & Race Schedule</h1>
+            <p class="driver-tagline">“Every lap counts.”</p>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <div class="simple-countdown">
+    <div id="simple-timer">
+        <span id="d">00</span>d :
+        <span id="h">00</span>h :
+        <span id="m">00</span>m :
+        <span id="s">00</span>s
+        <div class="next-race-panel">
+    <h3>Til we burn rubber again</h3>
+    </div>
+</div>
+
+<!-- CURRENT STANDINGS -->
+<section id="standings">
+    <div class="container">
+        <h2>Current Standings</h2>
+
+        <table class="results-table">
+            <tr>
+                <th>Driver</th>
+                <th>Class</th>
+                <th>Points</th>
+                <th>Wins</th>
+                <th>Podiums</th>
+            </tr>
+            <tr>
+                <td>Axel</td>
+                <td>Under 13</td>
+                <td>128</td>
+                <td>3</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Maci</td>
+                <td>Under 12</td>
+                <td>115</td>
+                <td>2</td>
+                <td>5</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<div class="next-race-panel">
+    <h3>Next Race Weekend</h3>
+
+    <div class="race-info">
+        <p><strong>📍 Location:</strong> 2026 Texas Shootout</p>
+        <p><strong>📅 Dates:</strong> May 30, 2026</p>
+        <p><strong>🏆 Event:</strong> Level 1 Pavement</p>
+        <p><strong>⏰ Start Time:</strong> 6 AM</p>
+    </div>
+
+    <p class="race-hype">“Be there when the green flag drops.”</p>
+</div>
+
+<!-- PHOTO GALLERY -->
+<section id="driver-gallery">
+    <div class="container">
+        <h2>Racing is Life</h2>
+
+        <div class="gallery-grid">
+            <img src="images/25ShootOutRookie.jpg" alt="Racing">
+            <img src="images/25GirlWarning.jpg" alt="Photo">
+            <img src="images/Victory Lane Background.jpg" alt="Victory Lane">
+        </div>
+    </div>
+</section>
+
+<!-- RACE SCHEDULE -->
+<section id="race-schedule">
+    <div class="container">
+        <h2>Upcoming Race Schedule</h2>
+
+        <table class="results-table">
+            <tr>
+                <th>Date</th>
+                <th>Track</th>
+                <th>Event</th>
+                <th>Start Time</th>
+            </tr>
+            <tr>
+                <td>June 30 - July 4 2026</td>
+                <td>Indianapolis Motor Speedway</td>
+                <td>Level 1 Pavement</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td>13 - 15 August, 2026</td>
+                <td>Richmond Raceway</td>
+                <td>Level 3 Pavement</td>
+                <td>TBD</td>
+            </tr>
+            <tr>
+                <td>2026</td>
+                <td>Best of the West</td>
+                <td>TBD</td>
+                <td>TBD</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="how-funds-help">
+    <div class="container">
+        <h2>How Your Support Helps</h2>
+        <p>Your donations directly help Axel and Maci stay competitive, safe, and race‑ready all season long.</p>
+
+        <ul class="funds-list">
+            <li><strong>Fuel & Travel:</strong> Getting to races across Texas and beyond.</li>
+            <li><strong>Entry Fees:</strong> Required for each event and championship series.</li>
+            <li><strong>Tires & Maintenance:</strong> Keeping the karts fast, safe, and race‑legal.</li>
+            <li><strong>Safety Gear:</strong> Helmets, suits, gloves, and protective equipment.</li>
+            <li><strong>Team Equipment:</strong> Tools, radios, and pit‑lane essentials.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
+<section id="follow-team">
+    <div class="container">
+        <h2>Where the Competition Never Lifts</h2>
+        <p>Get the Latest Standings & Results</p>
+
+        <form action="mailto:your-email@example.com" method="POST" enctype="text/plain" class="follow-box">
+            <label for="email">Enter your email</label>
+            <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+
+            <button type="submit" class="btn btn-primary">Join the List</button>
+        </form>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <nav class="footer-nav">
+        <a href="index.html"><img src="images/amracing-footer.png" alt=""></a>
+        <a href="axel.html"><img src="images/axel-footer.png" alt=""></a>
+        <a href="maci.html"><img src="images/Macifooter.png" alt=""></a>
+        <a href="support.html"><img src="images/trackstandingsfooter.png" alt=""></a>
+        <a href="support.html"><img src="images/supportfooter.png" alt=""></a>
+    </nav>
+</footer>
+
+<script>
+const raceDate = new Date("May 30, 2026 06:00:00").getTime();
+
+setInterval(function() {
+    const now = new Date().getTime();
+    const distance = raceDate - now;
+
+    if (distance < 0) {
+        document.getElementById("simple-timer").textContent = "GO!";
+        return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("d").textContent = String(days).padStart(2, '0');
+    document.getElementById("h").textContent = String(hours).padStart(2, '0');
+    document.getElementById("m").textContent = String(minutes).padStart(2, '0');
+    document.getElementById("s").textContent = String(seconds).padStart(2, '0');
+}, 1000);
+</script>
+
+
+</body>
+</html>
+                

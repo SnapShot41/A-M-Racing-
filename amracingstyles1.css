@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* COLOR SYSTEM — OPTION A */
+:root {
+    --primary: #002868;      /* Navy Blue */
+    --secondary: #FFFFFF;    /* White */
+    --accent: #BF0A30;       /* Red */
+    --accent-dark: #2d3274;  /* Deep Blue */
+    --bg: #f1f2fa;           /* Light Gray */
+    --text: #001524;
+    --white: #efefef;
+}
+
+/* GLOBAL */
+body {
+    font-family: "Playpen Sans", sans-serif;
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 16px;
+    margin: auto;
+}
+
+/* HERO HEADER (Homepage Only Animation) */
+#main-header {
+    position: relative;
+    min-height: 90vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+/* HOMEPAGE ONLY — MOVING CHECKERED OVERLAY */
+.homepage-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("images/checkered-pattern.png");
+    background-size: 300px 300px;
+    opacity: 0.18;
+    animation: flagWave 12s linear infinite;
+    mix-blend-mode: overlay;
+}
+
+@keyframes flagWave {
+    0% { background-position: 0 0; }
+    100% { background-position: 600px 600px; }
+}
+
+/* HERO CONTENT */
+.home-header {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    color: var(--secondary);
+    padding: 40px 20px;
+}
+
+.home-header .intro-heading {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+/* BUTTONS */
+.btn {
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background-color: var(--primary);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+/* NAVIGATION (Homepage Only) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+/* DRIVER BIO */
+#driver-bio {
+    padding: 60px 0;
+}
+
+.driver-bio-container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.driver-profile-img {
+    width: 350px;
+    border-radius: 10px;
+}
+
+.driver-bio-text {
+    max-width: 600px;
+}
+
+.driver-stats li {
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+/* GALLERY */
+#driver-gallery {
+    padding: 60px 0;
+    background: var(--bg);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* DRIVER SPOTLIGHT */
+#driver-spotlight {
+    padding: 60px 0;
+    background: var(--bg);
+    text-align: center;
+}
+
+.driver-grid {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.driver-card {
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    width: 280px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.driver-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* TABLES (Race Results, Standings, Schedule) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+td, th {
+    border: 1px solid var(--white);
+    padding: 12px;
+}
+
+tr:nth-child(even) {
+    background-color: #dfe6f3;
+}
+
+/* SUPPORT TEAM GRID */
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.support-card {
+    background: var(--secondary);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.support-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* CTA / EMAIL SIGNUP */
+.follow-box {
+    background: var(--bg);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.follow-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+    background: var(--secondary);
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-nav img {
+    width: 60px;
+    transition: 0.3s ease;
+}
+
+.footer-nav img:hover {
+    transform: scale(1.1);
+}
