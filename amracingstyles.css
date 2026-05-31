@@ -210,3 +210,10 @@ footer .container {
 .footer-list a {
     color: var(--primary);
 }
+.results-table {
+    margin-bottom: 80px; /* adds space under the table */
+}
+
+.results-table td {
+    padding: 16px 20px;
+}
