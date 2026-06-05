@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Team – A & M Racing Team</title>
+    <title>Axel – A & M Racing Team</title>
     <link rel="stylesheet" href="amracingstyles.css">
 </head>
 
 <body>
 
-<header id="main-header" class="driver-hero" style="background-image: url('images/supportetchedbox.png">
+<header id="main-header" class="driver-hero" style="background-image: url('images/amracing-header.png');">
     <div class="container">
-        
         <div class="home-header">
-            <h1 class="intro-heading">Support Team</h1>
+            <h1 class="intro-heading">Enter the Pits</h1>
             <p class="driver-tagline">“Behind every great racer is a great team.”</p>
         </div>
     </div>
@@ -21,158 +20,224 @@
 
 <main>
 
-<!-- SUPPORT TEAM GRID -->
-<section id="">
+<!-- DRIVER BIO -->
+<section id="driver-bio">
+    <div class="container driver-bio-container">
+        <img src="images/TexasLogo.jpg" alt="Axel" class="driver-profile-img">
+
+        <div class="driver-bio-text">
+            <h2>About A & M Racing</h2>
+            <p>
+                A & M Racing Team is fueled by two young drivers with big talent and even bigger heart — Axel (12) and Maci (9). This fast‑moving duo brings the heat every time they roll onto the track. Backing them is the ultimate support squad: Kelli and Thomas — Mom and Dad — the powerhouse pit crew who keep this team running strong on and off the course. Papa Bert takes command as Crew Chief, dialing in every detail to keep the kids race‑ready, while Granny handles team hospitality like a seasoned pro, keeping everyone energized and in winning form. And holding down the role of morale captain is Sage, the legendary racing kitty — provider of luck, cuddles, and championship‑level vibes at every event.
+            </p>
+
+            <ul class="team-stats">
+                <li><strong>Total years in the sport:</strong> 3</li>
+                <li><strong>Total National Titles:</strong> 2</li>
+                <li><strong>Total Team members:</strong> 6</li>
+                <li><strong>Longest Distance driven to compete:</strong> 18 hours</li>
+                <li><strong>A & M Racing Team Pit Headquarters:</strong> San Antonio, Texas</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- PHOTO GALLERY – AXEL -->
+<section id="driver-gallery-axel">
     <div class="container">
-        <h2>Meet the Crew</h2>
+        <h2>Axel in Action</h2>
 
-        <div class="support-grid">
+        <div class="gallery-grid">
+            <img src="images/Axel_Racing_10.jpg" alt="Axel Racing">
+            <img src="images/Axel_Racing_13.jpg" alt="Axel Standings">
+            <img src="images/Axel_Racing_4.jpg" alt="Axel Track Photo">
+            <img src="images/winningmensteam.png" alt="Axel Track Photo">
+        </div>
+    </div>
+</section>
 
-             <div class="support-card">
-                <img src="images/momndad.png" alt="Financing and Support">
-                <h3> Kelli and Thomas Balch</h3>
-                <p class="role">Mom and Dad</p>
-                <p class="bio">Smiles over every mile, lap and late night, and team coordination.</p>
+<!-- RACING FAMILY -->
+<section class="racing-family-section">
+    <div class="racing-checkered-stripe"></div>
+
+    <div class="racing-family-content">
+        <img src="winningteam1.jpg" alt="Our Racing Family" class="photo-frame"/>
+        <div class="tagline">
+            <span class="line1">The Dynamic Duo</span><br/>
+            <span class="line2">Winning is what we do</span>
+        </div>
+        <hr class="gold-rule" />
+        <p class="subtitle">"Our crew. Our heart. Our why."</p>
+    </div>
+
+    <div class="racing-checkered-stripe"></div>
+</section>
+
+<!-- DRIVER SPOTLIGHT -->
+<section id="driver-spotlight">
+    <div class="container">
+
+        <!-- VIDEO 1 -->
+        <section class="driver-video">
+            <h2>Maci's Race Day Highlights</h2>
+            <video controls width="100%">
+                <source src="videos/macirace1.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <!-- VIDEO 2 -->
+        <section class="driver-video">
+            <h2>Axel’s Race Day Highlights</h2>
+            <video controls width="100%">
+                <source src="videos/axelrace1.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <h2>Meet Our Drivers</h2>
+
+        <div class="driver-grid">
+
+            <div class="driver-card">
+                <img src="images/Axelincar.jpg" alt="Axel">
+                <h3>Axel</h3>
+                <p>“I race because speed is in my blood.”</p>
+                <a href="axel.html" class="btn btn-primary">View Axel’s Page</a>
             </div>
 
-            <div class="support-card">
-                <img src="images/Papa Bert Crew Chief.png" alt="Crew Chief">
-                <h3>Bert Cordeiro (papa)</h3>
-                <p class="role">Crew Chief</p>
-                <p class="bio">Brings experience, leadership, dedication to race strategy, pit decisions, and team coordination.</p>
-            </div>
-
-            <div class="support-card">
-                <img src="images/papa bert1.png" alt="Mechanic">
-                <h3>Papa Bert</h3>
-                <p class="role">Lead Mechanic</p>
-                <p class="bio">Keeps the cars tuned, safe, and race‑ready at all times.</p>
-            </div>
-
-            <div class="support-card">
-                <img src="images/thomas1.png" alt="Tire guy">
-                <h3>Thomas Balch</h3>
-                <p class="role">Tire guy</p>
-                <p class="bio">Guides drivers on the track with real‑time communication. Keeps the cars race ready from green to checkered flags</p>
-            </div>
-
-            <div class="support-card">
-                <img src="images/Grannylogo1.png" alt="Hospitality">
-                <h3>Karen</h3>
-                <p class="role">Granny</p>
-                <p class="bio">Keeps the team fed, organized and brings the feeling of home to the track</p>
-            </div>
-
-            <div class="support-card">
-                <img src="images/moneymakers1.jpg" alt="Team Coordinator">
-                <h3>Kelly Balch</h3>
-                <p class="role">Team Coordinator</p>
-                <p class="bio">Registration, scheduling, logistics and all behind-the-scenes details that keep the team moving forward.</p>
-            </div>
-            
-             <div class="support-card">
-                <img src="images/sage2.png" alt="Race Kitty">
-                 <img src="images/sage1.png" alt="Sage 1">
-                <h3>Sage</h3>
-                <p class="role">Mascot</p>
-                <p class="bio">Brings extra luck, cuddles and trackside morale tot he crew and everyone around</p>
+            <div class="driver-card">
+                <img src="images/Maci_1.jpg" alt="Maci">
+                <h3>Maci</h3>
+                <p>“Racing is where I feel unstoppable.”</p>
+                <a href="maci.html" class="btn btn-primary">View Maci’s Page</a>
             </div>
 
         </div>
     </div>
 </section>
 
-    <section class="racing-family-section">
-  <div class="racing-checkered-stripe"></div>
-  <div class="racing-family-content">
-    <img src="teamfamily1.jpg" alt="Our Racing Family"
-      class="photo-frame"/>
-    <div class="tagline">
-      <span class="line1">The Family that Races Together</span><br/>
-      <span class="line2">Stays Together</span>
+<!-- PHOTO GALLERY – MACI -->
+<section id="driver-gallery-maci">
+    <div class="container">
+        <h2>Maci in Action</h2>
+
+        <div class="gallery-grid">
+            <img src="images/maci_5.jpg" alt="Maci Racing">
+            <img src="images/maci_6.jpg" alt="Maci Standings">
+            <img src="images/maci_7.jpg" alt="Maci Track Photo">
+            <img src="images/featuremaci1.jpg" alt="Maci Track Photo">
+        </div>
     </div>
-    <hr class="gold-rule" />
-    <p class="subtitle">"Our crew. Our heart. Our why."</p>
-  </div>
-  <div class="racing-checkered-stripe"></div>
 </section>
 
-<section id="sponsor-support">
-     <h2 class="sponsor-strip-title">Our Proud Sponsors</h2>
-        <div class="sponsor-grid">
-
-        <div class="sponsor-box">
-            <img src="images/halftimepizza1.png" alt="sponsor1">
-            <h3>Halftime Pizza</h3>
-        </div>
-
-       <div class="sponsor-box">
-            <img src="images/tws1.png" alt="sponsor2">
-            <h3>TWS</h3>
-        </div>
-
-         <div class="sponsor-box">
-            <img src="images/lubelizard1.png" alt="sponsor3">
-            <h3>LubeLizard</h3>
-        </div>
-
-        <div class="sponsor-box">
-            <img src="images/oldpeople1.png" alt="sponsor4">
-            <h3>Old People Go Fast</h3>
-        </div>
-
-        <div class="sponsor-box">
-            <img src="images/waldo1.png" alt="sponsor5">
-            <h3>Where's Waldo</h3>
-        </div>
+<!-- SPONSORS -->
+<section id="sponsor-scroll">
+    <h2 class="sponsor-strip-title">Our Proud Sponsors</h2>
+    <div class="sponsor-track">
+        <a href="support.html" class="sponsor-card"><img src="images/halftimepizza1.png" alt="Sponsor 1"></a>
+        <a href="support.html" class="sponsor-card"><img src="images/tws1.png" alt="Sponsor 2"></a>
+        <a href="support.html" class="sponsor-card"><img src="images/lubelizard1.png" alt="Sponsor 3"></a>
+        <a href="support.html" class="sponsor-card"><img src="images/oldpeople1.png" alt="Sponsor 4"></a>
+        <a href="support.html" class="sponsor-card"><img src="images/waldo1.png" alt="Sponsor 5"></a>
     </div>
+</section>
 
-<!-- CONTACT SUPPORT -->
+<!-- RACE RESULTS -->
+<section id="race-results">
+    <div class="container">
+        <h2>Recent Race Results</h2>
+
+        <table class="results-table">
+            <tr>
+                <th>Race</th>
+                <th>Location</th>
+                <th>Finish</th>
+            </tr>
+            <tr>
+                <td>Texas Shootout</td>
+                <td>Austin</td>
+                <td>Axel finished 3rd Place</td>
+            </tr>
+            <tr>
+                <td>Texas Shootout</td>
+                <td>Austin</td>
+                <td>Maci finished 3rd Place</td>
+            </tr>
+        </table>
+
+        <h2>Next Track We're Burning Down</h2>
+
+        <table class="results-table">
+            <tr>
+                <th>Location</th>
+                <th>Event</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>San Antonio</td>
+                <td>Gets the Smoke</td>
+                <td>Saturday May 30th</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<!-- CALL TO ACTION -->
 <section id="support-contact">
     <div class="container cta-container">
-    <h2>Join the Team</h2>
-    <p>Connect with our crew to ask questions, explore sponsorships, or find volunteer roles.</p>
 
-    <form action="mailto:your-email@example.com" method="POST" enctype="text/plain" class="follow-box">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="Email" placeholder="you@example.com" required>
-        <button type="submit" class="btn btn-primary">Sign Up</button>
-    </form>
+        <h2>Join the Team</h2>
+        <p>Connect with our crew to ask questions, explore sponsorships, or find volunteer roles.</p>
 
-    <h2>Support the Team</h2>
-    <p>Want to help keep us racing? Reach out for partnership details or donation options.</p>
+        <form action="https://formsubmit.co/kellybalch00@gmail.com" method="POST" class="follow-box">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
 
-    <form action="mailto:your-email@example.com" method="POST" enctype="text/plain" class="follow-box">
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="Email" placeholder="you@example.com" required>
-        <button type="submit" class="btn btn-primary">Get Involved</button>
-    </form>
-</div>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+
+        <h2>Support the Team</h2>
+        <p>Want to help keep us racing? Reach out for partnership details or donation options.</p>
+
+        <form action="https://formsubmit.co/kellybalch00@gmail.com" method="POST" class="follow-box">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+
+            <button type="submit" class="btn btn-primary">Get Involved</button>
+        </form>
+
+    </div>
+</section>
+
+<!-- FOLLOW TEAM -->
+<section id="follow-team">
+    <div class="container">
+        <h2>Follow Our Team</h2>
+        <p>Get updates on races, results, and team news.</p>
+
+        <form action="mailto:your-email@example.com" method="POST" enctype="text/plain" class="follow-box">
+            <label for="email">Enter your email</label>
+            <input type="email" id="email" name="Email" placeholder="you@example.com" required>
+
+            <button type="submit" class="btn btn-primary">Join the List</button>
+        </form>
+    </div>
 </section>
 
 </main>
 
 <footer>
     <nav class="footer-nav">
-        <a href="index.html">
-            <img src="images/amracing-footer.png" alt="">
-        </a>
-        <a href="axel.html">
-            <img src="images/axel-footer.png" alt="">
-            
-        </a>
-        <a href="maci.html">
-            <img src="images/Macifooter.png" alt="">
-            
-        </a>
-        <a href="support.html">
-            <img src="images/trackstandingsfooter.png" alt="">
-            
-        </a>    
-        <a href="support.html">
-            <img src="images/supportfooter.png" alt="">
-            
-        </a>
+        <a href="index.html"><img src="images/amracing-footer.png" alt=""></a>
+        <a href="axel.html"><img src="images/axel-footer.png" alt=""></a>
+        <a href="maci.html"><img src="images/Macifooter.png" alt=""></a>
+        <a href="races.html"><img src="images/trackstandingsfooter.png" alt=""></a>
+        <a href="support.html"><img src="images/supportfooter.png" alt=""></a>
     </nav>
 </footer>
 
